@@ -50,6 +50,7 @@ contract PaymentChannel is ERC20 {
         );
         // Send the funds
         transferFrom(_from, to, msg.value);
+        // emit event to listeners
         emit UpdateBalance(
             _from,
             to,
